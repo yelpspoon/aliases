@@ -2,8 +2,9 @@
 #### from https://aruva.medium.com/100-bash-aliases-for-supersonic-productivity-d54a796422d9
 
 
-Download/clone the repo and add them to your current `rc` file of choice
+Download/clone the repo (edit them) and add them to your current `rc` file of choice
   - `source ~/.aliases`
+or use the install script.
 
 
 ### Regular Shell Commands
