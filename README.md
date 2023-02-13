@@ -106,6 +106,7 @@ Download/clone the repo and add them to your current `rc` file of choice
 `alias to=‘function __to() { cd "$@" && tree; }; __to'`
 > This allows you to navigate to a directory and list the files in it with a single command and also show the directory tree
 
+
 ### Git Based Aliases
 `alias gstat='git status'`
 > This shows the current status of the git repository
@@ -137,49 +138,6 @@ Download/clone the repo and add them to your current `rc` file of choice
 `alias gitlog='git log --graph --oneline --decorate --all'`
 > This shows the git log in a more readable format with the graph, one-line format, decorations and for all branches
 
-### MYSQL based Aliases
-`alias mysqlstart='sudo service mysql start'`
-> This starts the MySQL service
-
-`alias mysqlstop='sudo service mysql stop'`
-> This stops the MySQL service
-
-`alias mysqlstatus='sudo service mysql status'`
-> This shows the status of MySQL service
-
-`alias mysqldump='mysqldump --user=username --password=password --databases db_name > db_name.sql'`
-> This creates a backup of the MySQL database, with the given username, password and database name
-
-### Java Developer Aliases
-`alias javac='function __javac() { javac -Xlint:unchecked $1; }; __javac'`
-> This compiles a specified Java file with additional warnings for unchecked operations
-
-`alias java='function __java() { java -Xmx512M -Xss1024k $1; }; __java'`
-> This runs a specified Java class with increased heap and stack sizes
-
-`alias javadoc='function __javadoc() { javadoc -private -d $1 $2; }; __javadoc'`
-> This generates Java documentation for a specified package or class with private members included in the specified directory
-
-`alias mvn='function __mvn() { mvn clean install -Dmaven.test.skip=true; }; __mvn'`
-> This runs a maven clean install command and skips test cases
-
-`alias mvnDebug='function __mvnDebug() { mvnDebug clean install; }; __mvnDebug'`
-> This runs a maven in debug mode
-
-`alias gradle='function __gradle() { gradle --daemon --parallel --no-build-cache $1; }; __gradle'`
-> This runs gradle with daemon, parallel and no-build-cache options
-
-`alias gradlew='function __gradlew() { ./gradlew --daemon --parallel --no-build-cache $1; }; __gradlew'`
-> This runs gradle wrapper with daemon, parallel and no-build-cache options
-
-`alias jar='function __jar() { jar -xf $1; }; __jar'`
-> This extract contents of the specified jar file
-
-`alias jps='function __jps() { jps -l; }; __jps'`
-> This shows all the java processes running with their main class
-
-`alias jstack='function __jstack() { jstack -l $1; }; __jstack'`
-> This shows the stack trace of a specified java process id
 
 ### Python Developer Aliases
 `alias py='function __py() { python $1; }; __py'`
@@ -211,6 +169,7 @@ Download/clone the repo and add them to your current `rc` file of choice
 
 `alias pylint='function __pylint() { pylint --quiet $1; }; __pylint'`
 > This runs the pylint command with a quiet option, which suppresses unnecessary output
+
 
 ### Mac User Aliases
 `alias openfinder='function __openfinder() { open -a Finder $1; }; __openfinder'`
@@ -249,6 +208,7 @@ Download/clone the repo and add them to your current `rc` file of choice
 `alias battery="pmset -g batt | grep -Eo '[0-9]+%' | sed 's/%//'"`
 > This alias will display the current battery percentage on Mac.
 
+
 ### Kubernetes Aliases
 `alias k8s-create-ns='kubectl create namespace'`
 > Create a new k8s namespace
@@ -263,10 +223,55 @@ Download/clone the repo and add them to your current `rc` file of choice
 > Scale a deployment
 
 
+### MYSQL based Aliases
+`alias mysqlstart='sudo service mysql start'`
+> This starts the MySQL service
+
+`alias mysqlstop='sudo service mysql stop'`
+> This stops the MySQL service
+
+`alias mysqlstatus='sudo service mysql status'`
+> This shows the status of MySQL service
+
+`alias mysqldump='mysqldump --user=username --password=password --databases db_name > db_name.sql'`
+> This creates a backup of the MySQL database, with the given username, password and database name
+
+
+### Java Developer Aliases
+`alias javac='function __javac() { javac -Xlint:unchecked $1; }; __javac'`
+> This compiles a specified Java file with additional warnings for unchecked operations
+
+`alias java='function __java() { java -Xmx512M -Xss1024k $1; }; __java'`
+> This runs a specified Java class with increased heap and stack sizes
+
+`alias javadoc='function __javadoc() { javadoc -private -d $1 $2; }; __javadoc'`
+> This generates Java documentation for a specified package or class with private members included in the specified directory
+
+`alias mvn='function __mvn() { mvn clean install -Dmaven.test.skip=true; }; __mvn'`
+> This runs a maven clean install command and skips test cases
+
+`alias mvnDebug='function __mvnDebug() { mvnDebug clean install; }; __mvnDebug'`
+> This runs a maven in debug mode
+
+`alias gradle='function __gradle() { gradle --daemon --parallel --no-build-cache $1; }; __gradle'`
+> This runs gradle with daemon, parallel and no-build-cache options
+
+`alias gradlew='function __gradlew() { ./gradlew --daemon --parallel --no-build-cache $1; }; __gradlew'`
+> This runs gradle wrapper with daemon, parallel and no-build-cache options
+
+`alias jar='function __jar() { jar -xf $1; }; __jar'`
+> This extract contents of the specified jar file
+
+`alias jps='function __jps() { jps -l; }; __jps'`
+> This shows all the java processes running with their main class
+
+`alias jstack='function __jstack() { jstack -l $1; }; __jstack'`
+> This shows the stack trace of a specified java process id
+
+
 ### Bash Functions
 #### Problem Statement
 > I have a high-availability cluster that needs to be managed together by logging in on both servers and running commands on both. A shell function to do this using iTerm will look as below
-> and then this function can be used as an alias and invoked as below
 ```
 alias ssh2servers='function __ssh2servers() { 
 	open -a iTerm; 
@@ -280,10 +285,10 @@ alias ssh2servers='function __ssh2servers() {
 _ssh2servers'
 ```
 
+> and then this function can be used as an alias and invoked as below
 `ssh2servers server1@aruva.xyz server2@aruva.xyz`
 
 #### Other functions can be built. Below are a few examples
-
 > A function that searches for a specific file or directory in the current directory and all subdirectories:
 `finddir() { find . -name $1 }`
 
