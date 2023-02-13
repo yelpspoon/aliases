@@ -289,7 +289,7 @@ _ssh2servers'
 
 `ssh2servers server1@aruva.xyz server2@aruva.xyz`
 
-#### Other functions can be built. Below are a few examples
+#### Other functions can be built as follows:
 > A function that searches for a specific file or directory in the current directory and all subdirectories:
 `finddir() { find . -name $1 }`
 
