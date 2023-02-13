@@ -286,6 +286,7 @@ _ssh2servers'
 ```
 
 > and then this function can be used as an alias and invoked as below
+
 `ssh2servers server1@aruva.xyz server2@aruva.xyz`
 
 #### Other functions can be built. Below are a few examples
