@@ -9,6 +9,7 @@ Download/clone the repo and add them to your current `rc` file of choice
 ### Regular Shell Commands
 `alias ..='cd ..'`
 > This allows you to navigate up one directory level quickly
+
 `alias ...='cd ../..'`
 > This allows you to navigate up to two directory levels quickly.
 `alias ll='ls -al'`
