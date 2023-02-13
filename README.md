@@ -359,14 +359,14 @@ function runasroot(){
 The set -x command is used to turn on debugging in a shell script and can also be used to test bash aliases. 
 The command and its arguments are printed to the standard error stream before the command is executed. 
 
-> Turn on debugging
 `set -x`
+> Turn on debugging
 
-> Create an alias called "update" that runs the command "apt-get update"
 `alias update='apt-get update'`
+> Create an alias called "update" that runs the command "apt-get update"
 
-> Run the "update" alias
 `update`
+> Run the "update" alias
 
-> Turn off debugging
 `set +x`
+> Turn off debugging
